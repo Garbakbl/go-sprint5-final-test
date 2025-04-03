@@ -14,10 +14,12 @@ func Info(dataset []string, dp DataParser) {
 		err := dp.Parse(data)
 		if err != nil {
 			fmt.Println(err)
+			continue
 		}
 		result, err := dp.ActionInfo()
 		if err != nil {
 			fmt.Println(err)
+			continue
 		}
 		fmt.Println(result)
 	}
